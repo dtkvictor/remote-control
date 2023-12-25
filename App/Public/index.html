@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="./Assets/Css/style.css" rel="stylesheet">    
+    <link href="./Assets/Css/gamepad.css" rel="stylesheet">
+    <link href="./Assets/Css/touchpad.css" rel="stylesheet">
+    <title>Remote Control</title>
+</head>
+<body>
+    <header class="header">            
+        <nav class="links">
+            <button class="link-icon box" name="touchpad" selected="true">
+                <img src="./Assets/Images/touchpad.svg">                        
+            </button>
+            <button class="link-icon box" name="gamepad">
+                <img src="./Assets/Images/gamepad.svg">
+            </button>
+        </nav>
+    </header>
+
+    <div class="container" id="touchpadContent">
+        <div class="content touchpad-container">
+            <div class="write-content">
+                <textarea id="touchpad-write-area"></textarea>
+                <button id="touchpad-write-button" type="enter">
+                    <img src="./Assets/Images/enter.svg" name="enter">
+                    <img src="./Assets/Images/send.svg" name="send">
+                </button>
+            </div>
+            <div class="touchpad-content"> 
+                <div class="touchpad" id="touchpad"></div>            
+                <div class="touchpad-scroll">
+                    <button id="touchpad-scroll-top">
+                        <img src="./Assets/Images/arrow-sm-up.svg">
+                    </button>
+                    <button id="touchpad-scroll-bottom">
+                        <img src="./Assets/Images/arrow-sm-down.svg">
+                    </button>
+                </div>
+            </div>                        
+            <div class="touchpad-buttons">
+                <button id="touchpad-button-left" locked="false">
+                    <img src="./Assets/Images/lock.svg"/>
+                </button>
+                <button id="touchpad-button-right"></button>
+            </div>
+        </div>        
+    </div>
+
+    <div class="container hidden" id="gamepadContent">            
+        <div id="gamepad" class="content">
+            <div class="gamepad box">                
+                <div class="content content-left">
+                    <div class="arrows">
+                        <button class="arrow-left">←</button>
+                        <button class="arrow-top">↑</button>
+                        <button class="arrow-center">●</button>
+                        <button class="arrow-right">→</button>
+                        <button class="arrow-down">↓</button>
+                        <button class="button-l">L1</button>
+                        <button class="button-r">R1</button>
+                    </div>                    
+                </div>
+                <div class="content content-center">
+                    <div class="button-group">
+                        <button class="select"></button>
+                        <span>select</span>
+                    </div>
+                    <div class="button-group">
+                        <button class="start"></button>
+                        <span>start</span>
+                    </div>
+                </div>
+                <div class="content content-right">
+                    <div class="buttons">                        
+                        <button class="button-y">X</button>
+                        <button class="button-x">Y</button>                        
+                    </div>
+                    <div class="buttons">
+                        <button class="button-a">A</button>
+                        <button class="button-b">B</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./Assets/Js/script.js" type="module"></script>
+</body>
+</html>

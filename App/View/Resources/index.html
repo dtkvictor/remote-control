@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/gamepad.css" rel="stylesheet">
+    <link href="./css/iziToast.min.css" rel="stylesheet">
+    <title>Dashboard - Remote Control</title>    
+</head>
+<body>
+    <div class="container">                   
+        <header>
+            <h1>Dashboard</h1>
+            <nav class="links">
+                <button class="link-icon box" name="home" selected="true">
+                    <img src="../image/home.svg">                        
+                </button>
+                <button class="link-icon box" name="gamepad">
+                    <img src="../image/gamepad.svg">                        
+                </button>
+                <button class="link-icon box" name="configuration">
+                    <img src="../image/configuration.svg">                        
+                </button>
+            </nav>            
+        </header>        
+        
+        <section id="home" class="content">
+            <div class="info box" id="logger" ></div>            
+            <div class="box">
+                <div id="qrcode" class="qrcode-content"></div>
+            </div>
+            <div class="justify-end">
+                <button class="box" data-server="start"></button>
+            </div>                
+        </section>
+
+        <section id="gamepad" class="content hidden">
+            <div class="gamepad box">                
+                <div class="content-left">
+                    <div class="arrows">
+                        <input class="arrow-left" placeholder="←">
+                        <input class="arrow-top" placeholder="↑">
+                        <button class="arrow-center"></button>
+                        <input class="arrow-right" placeholder="→">
+                        <input class="arrow-down" placeholder="↓">
+                        <input class="button-l" placeholder="L1">
+                        <input class="button-r" placeholder="R1">
+                    </div>                    
+                </div>
+                <div class="content-center">
+                    <div class="input-group">
+                        <input class="select" placeholder="select">
+                    </div>
+                    <div class="input-group">
+                        <input class="start" placeholder="start">
+                    </div>
+                </div>
+                <div class="content-right">
+                    <div class="buttons input-buttons">                        
+                        <input class="button-y" placeholder="X">
+                        <input class="button-x" placeholder="Y">
+                    </div>
+                    <div class="buttons">
+                        <input class="button-a" placeholder="A">
+                        <input class="button-b" placeholder="B">
+                    </div>
+                </div>
+            </div>
+            <div class="justify-end" style="gap: 10px;">
+                <button id="btnGamepadClear" class="box btn-yellow btn-full">Limpar</button>
+                <button id="btnGamepadSave" class="box btn-blue btn-full">Salvar</button>
+            </div>            
+        </section>
+
+        <section id="configuration" class="content hidden">
+            <div class="config box">                
+                <div class="form-container" style="width: 50%;">                    
+                    <h3>Ports</h3>                    
+                    <div class="input-group">
+                        <label for="http-server">Http Server</label>
+                        <input type="number" name="http" id="http-server" group="port" min="1024" max="10000">
+                    </div>
+                    <div class="input-group">
+                        <label for="websocket">Websocket</label>
+                        <input type="number" name="ws" id="websocket" group="port" min="1024" max="10000">
+                    </div>
+                </div>                
+                <div class="form-container" style="width: 50%;">                    
+                    <h3>Touchpad</h3>                    
+
+                    <div class="input-group">
+                        <label for="touchpad-cursor-speed">Cursor speed</label>
+                        <input type="range" name="cursor-speed" id="touchpad-cursor-speed" group="touchpad" min="10" max="600" step="10">
+                    </div>
+                    <div class="input-group">
+                        <label for="touchpad-scroll-speed">Scroll speed</label>
+                        <input type="range" name="scroll-speed" id="touchpad-scroll-speed" group="touchpad" min="10" max="1000" step="10">
+                    </div>
+                </div>                                
+            </div>
+            <div class="justify-end">                
+                <button id="update-config-data" class="box btn-blue btn-full" style="width: 50%;">
+                    Salvar
+                </button>
+            </div>   
+        </section>
+        
+    </div>                
+    <script src="./js/qrcode.min.js"></script>
+    <script src="./js/main.js" type="module"></script>
+</body>
+</html>

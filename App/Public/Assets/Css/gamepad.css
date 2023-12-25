@@ -1,0 +1,200 @@
+:root {
+    --arrow-size: 30%;
+}
+
+.gamepad {
+    width: 100%;       
+    height: 100%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;    
+    padding: 2rem;    
+}
+
+.gamepad button:active {
+    scale: .80;
+}   
+
+.gamepad .content {    
+    width: 12rem;
+    height: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;    
+}
+
+.gamepad .content-center .button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+    font-weight: lighter;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.gamepad .content-center .button-group button {
+    width: 12px;
+    height: 30px;    
+    background-color: #212121;
+    border-radius: 10px;
+    transform: rotate(40deg);
+    box-shadow: 1px 2px 2px #212121;
+}
+
+.gamepad .content-left {        
+    border: solid 1px black;
+}
+
+.arrows {    
+    width: 65%;
+    height: 65%;
+    border-radius: 100%;
+    box-shadow: inset 0px 0px 3px #515151;
+    position: relative;    
+}
+
+.arrows button {
+    background-color: #212121;
+    width: var(--arrow-size);
+    height: var(--arrow-size);
+    position: absolute;    
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.arrow-left {
+    left: 10px;
+    bottom: calc(50% - var(--arrow-size) / 2);
+    border-radius: 5px  0px 0px 5px;
+    box-shadow: 1px 1px 2px #212121;    
+}
+
+.arrow-left-top {
+    left: 10px;
+    bottom: calc(50% - var(--arrow-size) / 2);
+    border-radius: 5px  0px 0px 5px;
+    box-shadow: 1px 1px 2px #212121;    
+}
+
+.arrow-left-bottom {
+    left: 10px;
+    bottom: calc(50% - var(--arrow-size) / 2);
+    border-radius: 5px  0px 0px 5px;
+    box-shadow: 1px 1px 2px #212121;    
+}
+
+
+.arrow-top {
+    top: 10px;
+    left: calc(50% - var(--arrow-size) / 2);
+    border-radius: 5px  5px 0px 0px;
+    box-shadow: -1px 1px 2px #212121;
+}
+
+
+.arrow-right {
+    right: 10px;
+    top: calc(50% - var(--arrow-size) / 2);
+    border-radius: 0px  5px 5px 0px;
+    box-shadow: -1px 1px 2px #212121;
+}
+
+.arrow-down {
+    bottom: 10px;
+    left: calc(50% - var(--arrow-size) / 2);
+    border-radius: 0px  0px 5px 5px;
+    box-shadow: 1px 1px 2px #212121;
+}
+
+.arrow-center {
+    top: calc(50% - var(--arrow-size) / 2);
+    left: calc(50% - var(--arrow-size) / 2);        
+}
+
+.arrow-center:active {
+    scale: none !important;
+}
+
+.button-l {
+    border-radius: 0px 5px 0px 0px;
+    box-shadow: 1px -1px 3px #212121;
+    top: 95%;
+    right: 95%;
+}
+
+.button-r {
+    border-radius: 5px 0px 0px 0px;
+    box-shadow: -1px -1px 3px #212121;
+    top: 95%;
+    left: 95%;
+}
+
+.gamepad .content-right {    
+    background-color: #212121;
+    border-radius: 100%;
+}
+
+.buttons {   
+    transform: rotate(20deg); 
+    width: 30%;
+    height: 65%;
+    background-color: white;
+    border-radius: 50px;
+    position: relative;
+    display: flex;    
+}
+
+.buttons button {
+    text-align: center;
+    font-weight: bold;    
+    width: 80%;
+    height: 35%;
+    position: absolute;        
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: white;
+    box-shadow: 11xp 0px 3px #212121;
+}
+
+.button-y {
+    left: 5px;
+    top: 5px;
+    background-color: #005a38;
+}
+
+.button-x {
+    bottom: 5px;
+    left: 5px;
+    background-color: #081978;   
+}
+
+.button-a {
+    right: 5px;
+    top: 5px;
+    background-color: #ae0306;
+}
+
+.button-b {
+    bottom: 5px;
+    left: 5px;
+    background-color: #fcb117;
+}
+
+/* Estilos para orientação retrato */
+@media screen and (orientation: portrait) {
+    .gamepad {        
+        flex-direction: column;
+    }
+    .gamepad .content {    
+        rotate: 90deg; 
+    }
+}
